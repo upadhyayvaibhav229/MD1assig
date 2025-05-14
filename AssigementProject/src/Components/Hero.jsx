@@ -3,6 +3,7 @@ import { images } from '../assets'
 import Banner from './Banner'
 import Bussiness from './Bussiness'
 import SuccessStories from './SuccessStories'
+import CountUp from 'react-countup'
 
 const Hero = () => {
     // style for bg image
@@ -35,18 +36,22 @@ const Hero = () => {
                 {/* right side */}
                 <div className="gap-5 flex flex-col md:ml-[10rem] mx-auto mt-5 md:mt-0">
                     <div className="">
-                        <span className='font-bold text-3xl'>26,000,000</span>
+                        <span className='font-bold text-3xl'>
+                            <CountUp start={0} end={26000000} duration={3} />
+                        </span>
                         <p className='text-gray-600'>active buyers globally</p>
                     </div>
 
                     <div className="">
-                        <span className='font-bold text-3xl'>400,000</span>
+                        <span className='font-bold text-3xl'><CountUp start={0} end={400000} duration={3} /></span>
                         <p className='text-gray-600'>product inquiries daily</p>
                     </div>
 
                     <div className="">
 
-                        <span className='font-bold text-3xl'>200</span>
+                        <span className='font-bold text-3xl'>
+                            <CountUp start={0} end={200} duration={3} />
+                        </span>
                         <p className='text-gray-600'>countries and regions represented</p>
                     </div>
                 </div>
